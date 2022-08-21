@@ -14,12 +14,12 @@ pipeline {
 	
         stage('Run Tests') {
             parallel {
-                stage('Test On Windows') {
+                stage('Test On Slave1') {
                     agent {
-                        label "Windows_Node"
+                        label "Slave1"
                     }
                     steps {
-                        echo "Task1 on Agent"
+                        echo "Task1 on Slave1"
                     }
                     
                 }
